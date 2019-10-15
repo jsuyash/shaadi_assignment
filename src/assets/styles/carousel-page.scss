@@ -1,0 +1,38 @@
+@import "../modules/flex";
+@import "../modules/common";
+
+.carousel-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(0deg, #cacaca87, transparent);
+  .btn-show-history {
+    border: 0px;
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #f7533a;
+    border-radius: 3px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 4px 3px 2px #00000029;
+  }
+  @include flex--row-center;
+  .slide-action-block {
+    @include flex--row-center;
+    @include select-component;
+    animation: 5s all ease-in-out;
+  }
+  .slide-action-block-selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #ff5722;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    animation: 4s all ease-in-out;
+    @include select-component;
+  }
+}

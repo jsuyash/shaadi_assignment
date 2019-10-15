@@ -1,0 +1,58 @@
+@import "../../assets/modules/flex";
+@import "../../assets/modules/common";
+
+.login-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(0deg, #cacaca87, transparent);
+  @include flex--row-space-evenly-center;
+  align-items: stretch;
+  .left-block {
+    flex-basis: 60%;
+    background: linear-gradient(45deg, #e91e63, #ff7321);
+    .title-wrapper {
+      @include flex--row-center;
+      flex-direction: column;
+      height: 100vh;
+      .main-title {
+        font-size: 4rem;
+        @include gradient-text(#fff, #aaa);
+        text-shadow: 3px 1px #ffffff;
+      }
+      .sub-title {
+        font-size: 1rem;
+        color: #dcdcdc;
+      }
+    }
+  }
+  .right-block {
+    flex-basis: 40%;
+    background: #fff;
+    box-shadow: -3px -7px 4px #7575753b, 0px 0px 4px #e8e8e863;
+    @include flex--row-center;
+    flex-direction: column;
+    form {
+      @include form-style;
+    }
+  }
+}
+
+// NOTE: Media Query For Desktop
+@media (min-width: 721px) {
+  .login-wrapper {
+    .left-block {
+      display: block;
+    }
+  }
+}
+// NOTE: Media Query For Mobile
+@media (max-width: 720px) {
+  .login-wrapper {
+    .left-block {
+      display: none;
+    }
+    .right-block {
+      flex-basis: 100%;
+    }
+  }
+}

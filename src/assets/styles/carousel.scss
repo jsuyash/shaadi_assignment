@@ -1,0 +1,58 @@
+@import "../modules/flex";
+@import "../modules/common";
+
+.carousel-wrapper {
+  width: 100%;
+  position: relative;
+  .carousel-indicator-wrapper {
+    @include flex--row-center;
+    width: 100%;
+    margin-top: 25px;
+    .indicator {
+      width: 25px;
+      height: 3px;
+      background: #00000036;
+      margin: 0px 5px;
+      cursor: pointer;
+    }
+    .indicator.active {
+      background: #f44336;
+    }
+  }
+  .left-arrow {
+    position: absolute;
+    top: 50%;
+    display: block;
+    color: #f00;
+    cursor: pointer;
+    opacity: 0.75;
+    left: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    display: block;
+    color: #f00;
+    cursor: pointer;
+    opacity: 0.75;
+    right: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .carousel-content-wrapper {
+    width: 100%;
+    @include flex--row-center;
+    .carousel-body-main-text {
+      display: none;
+      font-size: 10rem;
+      @include gradient-text(#f44336, #ff9800);
+      font-family: fantasy;
+    }
+    .carousel-body-main-text.active {
+      display: block;
+      font-size: 10rem;
+    }
+  }
+}

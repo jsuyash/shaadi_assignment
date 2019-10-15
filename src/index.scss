@@ -1,0 +1,11 @@
+@import "./assets/modules/common";
+
+body {
+  margin: 0;
+  padding: 0;
+  @include main-app-font;
+}
+
+input {
+  outline: none;
+}

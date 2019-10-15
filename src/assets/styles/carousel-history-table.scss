@@ -1,0 +1,71 @@
+@import "../modules/assets_color_pallete";
+.update-history-table-wrapper {
+  margin-top: 30px;
+  table {
+    border: none;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    border-collapse: collapse;
+    thead {
+      background-color: $table-head-background-color;
+      border-bottom: 2px solid $table-head-bottom-color;
+      tr {
+        border-bottom: 1px solid $table-head-table-row-border-bottom-color;
+        th {
+          padding: 10px;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          color: $table-head-table-row-head;
+        }
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid transparent;
+        height: 50px;
+        td {
+          padding: 10px;
+          font-size: 0.9rem;
+          color: $table-body-table-row-data;
+          a {
+            .download-icon {
+              color: var(--indigo-color);
+              &:hover {
+                transition: 0.3s ease-in-out;
+                transform: scale(1.3);
+              }
+            }
+          }
+        }
+        td.copy-value {
+          cursor: copy;
+        }
+      }
+      tr.selected-row {
+        background: linear-gradient(
+            to right,
+            #8842ca 0%,
+            #8a35dd 4%,
+            #5102b6 50%,
+            #4f1585 96%,
+            #4a1281 100%
+          ),
+          var(--white-color);
+        td {
+          color: var(--white-color);
+          a {
+            color: var(--white-color);
+            .download-icon {
+              color: var(--white-color);
+              &:hover {
+                transition: 0.3s ease-in-out;
+                transform: scale(1.3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
