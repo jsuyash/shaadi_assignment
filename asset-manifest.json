@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/shaadi_assignment/static/css/main.f0e68b61.chunk.css",
-    "main.js": "/shaadi_assignment/static/js/main.80b4d755.chunk.js",
-    "main.js.map": "/shaadi_assignment/static/js/main.80b4d755.chunk.js.map",
+    "main.css": "/shaadi_assignment/static/css/main.7931e4c4.chunk.css",
+    "main.js": "/shaadi_assignment/static/js/main.568ee77d.chunk.js",
+    "main.js.map": "/shaadi_assignment/static/js/main.568ee77d.chunk.js.map",
     "runtime-main.js": "/shaadi_assignment/static/js/runtime-main.7864c538.js",
     "runtime-main.js.map": "/shaadi_assignment/static/js/runtime-main.7864c538.js.map",
     "static/js/2.96ff4a19.chunk.js": "/shaadi_assignment/static/js/2.96ff4a19.chunk.js",
     "static/js/2.96ff4a19.chunk.js.map": "/shaadi_assignment/static/js/2.96ff4a19.chunk.js.map",
     "index.html": "/shaadi_assignment/index.html",
-    "precache-manifest.a65429f460ebe9261fd8cf860f5e6174.js": "/shaadi_assignment/precache-manifest.a65429f460ebe9261fd8cf860f5e6174.js",
+    "precache-manifest.c2531805f7b2a6f6d2d50b02c2e22e2b.js": "/shaadi_assignment/precache-manifest.c2531805f7b2a6f6d2d50b02c2e22e2b.js",
     "service-worker.js": "/shaadi_assignment/service-worker.js",
-    "static/css/main.f0e68b61.chunk.css.map": "/shaadi_assignment/static/css/main.f0e68b61.chunk.css.map"
+    "static/css/main.7931e4c4.chunk.css.map": "/shaadi_assignment/static/css/main.7931e4c4.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.7864c538.js",
     "static/js/2.96ff4a19.chunk.js",
-    "static/css/main.f0e68b61.chunk.css",
-    "static/js/main.80b4d755.chunk.js"
+    "static/css/main.7931e4c4.chunk.css",
+    "static/js/main.568ee77d.chunk.js"
   ]
 }
