@@ -1,7 +1,8 @@
 {
   "name": "shaadi",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "https://jsuyash.github.io/shaadi_assignment/",
   "dependencies": {
     "node-sass": "^4.12.0",
     "react": "^16.10.2",

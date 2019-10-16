@@ -16,6 +16,19 @@ export class Carousel extends React.Component {
     this.showSelectedSlide = this.showSelectedSlide.bind(this);
   }
 
+  componentDidMount() {
+    const { delay = "" } = this.props;
+    if (delay) {
+      this.startCaraousel = setInterval(() => {
+        const { activeSlide } = this.state;
+        const { content } = this.props;
+        const total = content.length;
+        let val = activeSlide + 1 >= total ? 0 : activeSlide + 1;
+        this.setState({ activeSlide: val });
+      }, delay);
+    }
+  }
+
   handleOnSlideLeft() {
     const { activeSlide } = this.state;
 
@@ -47,6 +60,10 @@ export class Carousel extends React.Component {
     if (this.props.content.length !== content.length) {
       this.setState({ activeSlide: 0 });
     }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.startCaraousel);
   }
   render() {
     const { content = [] } = this.props;
