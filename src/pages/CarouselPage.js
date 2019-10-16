@@ -30,7 +30,10 @@ class CarouselPage extends React.Component {
 
   componentDidMount() {
     const { history } = this.props;
-    if (!sessionStorage.getItem("IsLogin") || sessionStorage.getItem("IsLogin") !== "1") {
+    if (
+      !sessionStorage.getItem("IsLogin") ||
+      sessionStorage.getItem("IsLogin") !== "1"
+    ) {
       history.push("/login");
     }
   }
@@ -67,7 +70,10 @@ class CarouselPage extends React.Component {
 
   saveData = () => {
     const { updateHistory } = this.state;
-    sessionStorage.setItem("CarouselUpdateHistory", JSON.stringify(updateHistory));
+    sessionStorage.setItem(
+      "CarouselUpdateHistory",
+      JSON.stringify(updateHistory)
+    );
   };
 
   _renderSelectOptions = num => {
@@ -89,11 +95,17 @@ class CarouselPage extends React.Component {
     const { noOfSlides, updateHistory, modalState } = this.state;
     const carouselContent = generateData(noOfSlides);
     const componentClassName =
-      noOfSlides && noOfSlides > 0 ? "slide-action-block-selected" : "slide-action-block";
+      noOfSlides && noOfSlides > 0
+        ? "slide-action-block-selected"
+        : "slide-action-block";
+    const sectionBgColor =
+      noOfSlides && noOfSlides > 0
+        ? {}
+        : { background: "linear-gradient(45deg, #ff7321, #e91e63)" };
     return (
       <React.Fragment>
         <Header onLogoutClick={this.onLogoutClick} />
-        <section className="carousel-page-wrapper">
+        <section className="carousel-page-wrapper" style={sectionBgColor}>
           <div className={componentClassName}>
             <select name="noOfSlides" onChange={this.handleOnChange}>
               <option value="">Select No. Of Slides </option>
@@ -109,7 +121,7 @@ class CarouselPage extends React.Component {
               </button>
             )}
           </div>
-          {!!noOfSlides && <Carousel content={carouselContent} />}
+          {!!noOfSlides && <Carousel content={carouselContent} delay={3000} />}
           <Modal open={modalState} onClose={this.handleOnCloseModal} center>
             <CaraouselHistoryTable updateHistory={updateHistory} />
           </Modal>

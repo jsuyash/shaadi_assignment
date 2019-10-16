@@ -22,24 +22,28 @@
   }
   .left-arrow {
     position: absolute;
-    top: 40%;
+    top: 50%;
+    transform: translateY(-50%);
     display: block;
-    color: #f00;
+    color: #ff5722;
+    font-family: cursive;
     cursor: pointer;
     opacity: 0.75;
     left: 10px;
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: bold;
   }
   .right-arrow {
     position: absolute;
-    top: 40%;
+    top: 50%;
+    transform: translateY(-50%);
     display: block;
-    color: #f00;
+    color: #ff5722;
+    font-family: cursive;
     cursor: pointer;
     opacity: 0.75;
     right: 10px;
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: bold;
   }
   .carousel-content-wrapper {
@@ -47,12 +51,15 @@
     @include flex--row-center;
     .carousel-body-main-text {
       display: none;
-      font-size: 10rem;
-      @include gradient-text(#f44336, #ff9800);
+      font-size: 8rem;
+      // @include gradient-text(#f44336, #ff9800);
+      @include gradient-text(#ff7321, #e91e63);
       font-family: fantasy;
+      animation: all 2.5s ease-in-out;
     }
     .carousel-body-main-text.active {
       font-size: 10rem;
+      animation: all 2.5s ease-in-out;
       width: 100px;
       height: 100px;
       background-color: #fff;
