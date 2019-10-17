@@ -19,7 +19,6 @@
   .slide-action-block {
     @include flex--row-center;
     @include select-component;
-    transition: all 0.3s ease-in-out;
   }
   .slide-action-block-selected {
     display: flex;
@@ -32,7 +31,17 @@
     background: #ff5722;
     width: calc(100% - 40px);
     padding: 8px 20px;
-    transition: all 0.3s ease-in-out;
+    animation: slideToBottom 0.8s;
     @include select-component;
+  }
+}
+
+// NOTE: SLide Animation
+@keyframes slideToBottom {
+  from {
+    bottom: 200px;
+  }
+  to {
+    bottom: 0px;
   }
 }

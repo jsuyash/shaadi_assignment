@@ -9,7 +9,8 @@ export class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeSlide: 0
+      activeSlide: 0,
+      animationClassName: "slide-left"
     };
     this.handleOnSlideLeft = this.handleOnSlideLeft.bind(this);
     this.handleOnSlideRight = this.handleOnSlideRight.bind(this);
@@ -36,7 +37,7 @@ export class Carousel extends React.Component {
     if (value < 0) {
       value = 0;
     }
-    this.setState({ activeSlide: value });
+    this.setState({ activeSlide: value, animationClassName: "slide-right" });
   }
 
   handleOnSlideRight() {
@@ -48,7 +49,7 @@ export class Carousel extends React.Component {
     if (value >= length) {
       value = 0;
     }
-    this.setState({ activeSlide: value });
+    this.setState({ activeSlide: value, animationClassName: "slide-left" });
   }
 
   showSelectedSlide(value) {
@@ -58,7 +59,7 @@ export class Carousel extends React.Component {
   componentDidUpdate(prevProps) {
     const { content = [] } = prevProps;
     if (this.props.content.length !== content.length) {
-      this.setState({ activeSlide: 0 });
+      this.setState({ activeSlide: 0, animationClassName: "slide-left" });
     }
   }
 
@@ -67,11 +68,15 @@ export class Carousel extends React.Component {
   }
   render() {
     const { content = [] } = this.props;
-    const { activeSlide = 1 } = this.state;
+    const { activeSlide = 1, animationClassName } = this.state;
     return (
       <section className="carousel-wrapper">
         <LeftArrow handleOnSlideLeft={this.handleOnSlideLeft} />
-        <CarouselContent content={content} activeSlide={activeSlide} />
+        <CarouselContent
+          content={content}
+          activeSlide={activeSlide}
+          animationClassName={animationClassName}
+        />
         <CarouselIndicator
           content={content}
           activeSlide={activeSlide}

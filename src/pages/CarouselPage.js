@@ -30,10 +30,7 @@ class CarouselPage extends React.Component {
 
   componentDidMount() {
     const { history } = this.props;
-    if (
-      !sessionStorage.getItem("IsLogin") ||
-      sessionStorage.getItem("IsLogin") !== "1"
-    ) {
+    if (!sessionStorage.getItem("IsLogin") || sessionStorage.getItem("IsLogin") !== "1") {
       history.push("/login");
     }
   }
@@ -51,12 +48,9 @@ class CarouselPage extends React.Component {
     this.setState({ [name]: value });
     const currentDate = new Date().toISOString();
     const data = { noOfSlides: value, createdAt: currentDate };
-    this.setState(
-      prevState => ({
-        updateHistory: [...prevState.updateHistory, data]
-      }),
-      this.saveData
-    );
+    this.setState(prevState => ({
+      updateHistory: [...prevState.updateHistory, data]
+    }));
   }
 
   onLogoutClick() {
@@ -70,10 +64,7 @@ class CarouselPage extends React.Component {
 
   saveData = () => {
     const { updateHistory } = this.state;
-    sessionStorage.setItem(
-      "CarouselUpdateHistory",
-      JSON.stringify(updateHistory)
-    );
+    sessionStorage.setItem("CarouselUpdateHistory", JSON.stringify(updateHistory));
   };
 
   _renderSelectOptions = num => {
@@ -95,13 +86,14 @@ class CarouselPage extends React.Component {
     const { noOfSlides, updateHistory, modalState } = this.state;
     const carouselContent = generateData(noOfSlides);
     const componentClassName =
-      noOfSlides && noOfSlides > 0
-        ? "slide-action-block-selected"
-        : "slide-action-block";
+      noOfSlides && noOfSlides > 0 ? "slide-action-block-selected" : "slide-action-block";
     const sectionBgColor =
       noOfSlides && noOfSlides > 0
         ? {}
-        : { background: "linear-gradient(45deg, #ff7321, #e91e63)" };
+        : {
+            background: "linear-gradient(45deg, #ff7321, #e91e63)",
+            transition: "all 1s ease-in-out"
+          };
     return (
       <React.Fragment>
         <Header onLogoutClick={this.onLogoutClick} />

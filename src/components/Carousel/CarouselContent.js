@@ -1,17 +1,17 @@
 import React from "react";
 
 const Content = props => {
-  const { mainText = "", componentClassName } = props;
+  const { mainText = "", componentClassName, animationClassName } = props;
 
   return (
-    <div className={["carousel-body-main-text", componentClassName].join(" ")}>
+    <div className={["carousel-body-main-text", componentClassName, animationClassName].join(" ")}>
       {mainText}
     </div>
   );
 };
 
 const Carousel = props => {
-  const { content = [], activeSlide } = props;
+  const { content = [], activeSlide, animationClassName } = props;
   return (
     <section className="carousel-content-wrapper">
       {content &&
@@ -22,6 +22,7 @@ const Carousel = props => {
               key={index}
               mainText={data.mainText}
               activeSlide={activeSlide}
+              animationClassName={animationClassName}
               componentClassName={activeSlide === index ? "active" : ""}
             />
           );
