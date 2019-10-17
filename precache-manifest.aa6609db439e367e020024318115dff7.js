@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "242ff8b184becc5894a7abb052a0521e",
+    "revision": "fd9c32d6d2884e31c6faffc05da8d128",
     "url": "/shaadi_assignment/index.html"
   },
   {
-    "revision": "78d9be99ccd200d465aa",
+    "revision": "9ef02a71c14a7f2941c8",
     "url": "/shaadi_assignment/static/css/main.0e019938.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shaadi_assignment/static/js/2.96ff4a19.chunk.js"
   },
   {
-    "revision": "78d9be99ccd200d465aa",
-    "url": "/shaadi_assignment/static/js/main.2b6bf3e3.chunk.js"
+    "revision": "9ef02a71c14a7f2941c8",
+    "url": "/shaadi_assignment/static/js/main.986ee4ae.chunk.js"
   },
   {
     "revision": "985287ccc15c9390180a",
