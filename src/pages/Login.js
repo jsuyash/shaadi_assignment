@@ -99,7 +99,7 @@ class Login extends React.Component {
                 type="password"
                 name="password"
                 value={password}
-                placeholder="Username"
+                placeholder="Password"
                 onChange={this.handleOnChange}
                 onBlur={this.handleOnBlur}
               />
