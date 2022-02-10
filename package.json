@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://jsuyash.github.io/shaadi_assignment/",
   "dependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-responsive-modal": "^4.0.1",
